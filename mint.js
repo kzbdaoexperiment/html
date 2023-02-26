@@ -27,7 +27,7 @@ async function mint()
 	})
 	.then((receipt) => {
 		console.log("Transakcja wykonana. Txn Hash:", receipt.transactionHash);
-		document.getElementById("message").innerText = ("Transakcja wykonana poprawnie. Txn Hash: " + receipt.transactionHash);
+		document.getElementById("message").innerText = ("SUKCES! Transakcja wykonana poprawnie. Txn Hash: " + receipt.transactionHash);
 	})
 	.catch((error) => {
 		console.error("Błąd:", error);
