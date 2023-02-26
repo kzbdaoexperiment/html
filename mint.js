@@ -31,6 +31,12 @@ async function mint()
 	})
 	.catch((error) => {
 		console.error("Błąd:", error);
-		document.getElementById("message").innerText = ("Błąd: " + error.message);
+		if (referrer.toLowerCase().includes("You must own an NFT to mint tokens".toLowerCase())) {
+			document.getElementById("message").innerText = ("Błąd: Nie posiadasz KZB NFT na wskazanym portfelu");
+		}
+		else
+		{
+			document.getElementById("message").innerText = ("Błąd: " + error.message);
+		}
 	});
 }
